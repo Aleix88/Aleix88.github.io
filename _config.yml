@@ -18,16 +18,68 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+# General settings
+title: "Aleix Díaz - Blog"
+name: "Aleix Díaz"
+email: "your-email@example.com"
+# logo: Add a logo image
+locale: "es-ES"
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Este es el lugar donde subo mis notas sobre ingeniería del software. La mayoría de artículos basados en iOS Swift"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://Aleix88.github.io"
+repository: "Aleix88/Aleix88.github.io"
 twitter_username: jekyllrb
 github_username:  jekyll
+
+# Minimal mistakes settings
+minimal_mistakes_skin: "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+search: false # To enable/disable posts indexing and searching
+defaults:
+    # _posts
+    - scope:
+        path: ""
+        type: posts
+      values:
+        layout: single
+        author_profile: true
+        show_date: true
+        date_format: "%Y-%m-%d"
+        read_time: true
+        comments: false #To enable/disable comments on posts
+        share: true
+        related: true
+
+# Social networks
+social:
+    links:
+        - "https://www.linkedin.com/in/aleixdiazbaggerman"
+        - "https://github.com/Aleix88"
+
+# Author
+author:
+    name: "Aleix Díaz"
+    avatar: "/assets/images/logo.png"
+    bio: "iOS Developer"
+    location: "BCN, Spain"
+    links:
+        - label: "Linkedin"
+          icon: "fab fa-linkedin"
+          url: "https://www.linkedin.com/in/aleixdiazbaggerman"
+        - label: "GitHub"
+          icon: "fab fa-fw fa-github"
+          url: "https://github.com/Aleix88"
+
+# Footer
+footer:
+  links:
+    - label: "Linkedin"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/aleixdiazbaggerman"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/Aleix88"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
