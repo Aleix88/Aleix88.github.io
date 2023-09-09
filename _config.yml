@@ -87,6 +87,14 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 
+
+# Analytics
+analytics:
+  provider: "google-gtag"
+  google:
+    tracking_id: "G-T0XEYX0RJB"
+    anonymize_ip: false # default
+
 atom_feed:
   hide: true
 
