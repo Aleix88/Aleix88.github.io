@@ -84,7 +84,7 @@ Las ventajas de la notación científica son las mismas que tiene el sistema de 
 
 Pues más o menos de la misma forma se representan los números binarios en un ordenador. Pongamos el ejémplo de un Float (32 bits).
 
-> La IEEE especifica la longitud que deben tener los Floats (32 bits) y los Double (64 bits) por lo que es común en los diferentes lenguajes de programación). También especifican todo sobre su representación, si tienes curiosidad puedes buscar *IEEE 754*.
+> La IEEE especifica la longitud que deben tener los Floats (32 bits) y los Double (64 bits), por eso es común en los diferentes lenguajes de programación. También especifican todo sobre su representación, si tienes curiosidad puedes buscar *IEEE 754*.
 
 ![Float bits structure](/resources/2023-09-09-float-structure.png)
 
@@ -92,7 +92,7 @@ Como podemos ver en la imagen anterior los bits de un float estan divididos en 3
 
 ![Formula coma flotante](/resources/2023-09-09-floating-point-formula.jpg)
 
-Si queréis entender bien porque esa combinación de bits resulta el número `0.15625` os recomiendo que os leáis [está entrada de wikipedia](https://es.wikipedia.org/wiki/Formato_en_coma_flotante_de_simple_precisión), ya que no es tan directo como puede parecer. Por un lado el exponente viene sesgado en `127` (`2^8 - 1`). Por otro lado, el bit de mayor peso del coeficiente siempre se omite, pero está especificado como `1` por defecto, a menos que el exponente sea todo ceros, en ese caso se entiende como `0`. A partir de este primer bit omitido, `1` en este caso, añadimos una coma y le siguen el resto de bits del coeficiente. Es decir, en este caso podemos expresar el coeficiente en binario como `1.01` (`1.25` en decimal. El primer `1` es el `1` en decimal y el `.01` es `2^-2`, es decir, `0.25` en decimal.). Siguiendo la fórmula de coma flotante: `coeficiente * 2 ^ (exponente - 127) = 1.25 * 2 ^ (124 - 127) = 0.15625` 🥵.
+Si queréis entender bien porque esa combinación de bits resulta el número `0.15625` os recomiendo que os leáis [está entrada de wikipedia](https://es.wikipedia.org/wiki/Formato_en_coma_flotante_de_simple_precisión), ya que no es tan directo como puede parecer. Por un lado el exponente viene sesgado en `127` (`(2^8)/2 - 1`). Por otro lado, el bit de mayor peso del coeficiente siempre se omite, pero está especificado como `1` por defecto, a menos que el exponente sea todo ceros, en ese caso se entiende como `0`. A partir de este primer bit omitido, `1` en este caso, añadimos una coma y le siguen el resto de bits del coeficiente. Es decir, en este caso podemos expresar el coeficiente en binario como `1.01` (`1.25` en decimal. El primer `1` es el `1` en decimal y el `.01` es `2^-2`, es decir, `0.25` en decimal.). Siguiendo la fórmula de coma flotante: `coeficiente * 2 ^ (exponente - 127) = 1.25 * 2 ^ (124 - 127) = 0.15625` 🥵.
 
 Como hemos explicado al principio del artículo, al tener un número de bits limitado para el coeficiente nos encontraremos con muchos números que no se pueden representar. De hecho, una diferencia importante entre los Int y los números que se almacenan con coma flotante es que, la distancía entre un entero y el siguiente entero representable siempre es la misma (siempre es uno), en cambio con un Float o Double, la distancía entre un número y el siguiente representable no sigue una distribución uniforme.
 
