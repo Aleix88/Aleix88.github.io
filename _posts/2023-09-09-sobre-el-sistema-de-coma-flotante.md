@@ -55,7 +55,7 @@ Para representar numeros con decimales (con coma) en binario se hace lo mismo pe
 
 Entonces, como `0.1` no se puede representar de forma exacta en binario sin redondear, cada vez que hacemos una operación con este número acumulamos un error. Este error acumulado es la respuesta a los resultados que hemos visto en los ejemplos de antes.
 
-Pero la representación con base 2 no es la única que tiene problemas, lo mismo nos pasa si intentamos representar `1/3` en base 10 que sería algo como `1.3333333...` (hasta el infinito). En cambio usando base 3 simplemente diríamos que es `3^-1` es decir `1` (en base 3).
+Pero la representación con base 2 no es la única que tiene problemas, lo mismo nos pasa si intentamos representar `1/3` en base 10 que sería algo como `1.3333333...` (hasta el infinito). En cambio usando base 3 simplemente diríamos que es `3^-1` es decir `0.1` (en base 3).
 
 Puede que te estes preguntando lo siguiente: Si el numero `4` en binario es `100`, como represento el `4.5`, se pueden poner comas en los números binarios? La respuesta es que si, podríamos poner una coma y representarlo como `100.1` (`100` para el 4 y `0.1` para el `0.5`). 
 
